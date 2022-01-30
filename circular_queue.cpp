@@ -9,7 +9,7 @@ int cqueue[10];
 int front = -1, rear = -1, Maxsize=5;
 
 void insertitem(int item) {
-   if ((front == 0 && rear == Maxsize-1) || (front == rear+1)) {
+   if ( (front == rear+1) % Maxsize) {
       cout<<"Queue Overflow \n";
       return;
    }
